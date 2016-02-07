@@ -13,6 +13,8 @@ gem 'pg', '~> 0.18.4'
 gem 'puma', '~> 2.16'
 gem 'rubocop', '~> 0.36.0', require: false
 gem "bower-rails", "~> 0.10.0"
+gem 'rails_12factor', group: :production
+
 # gem 'bcrypt', '~> 3.1.7'
 
 # gem 'capistrano-rails', group: :development
