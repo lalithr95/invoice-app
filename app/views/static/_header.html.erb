@@ -1,11 +1,27 @@
 <nav class="navbar navbar-inverse navbar-lg navbar-fixed-top mainNav" role="navigation">
-	<div class="navbar-header">
-		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="navbar-collapse-03">
-			<span class="sr-only">Toggle navigation</span>
-		</button>
-		<a class="navbar-brand" href="/">Zenvoices</a>
-	</div>
+  <div class="navbar-header">
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="navbar-collapse-03">
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+    <a class="navbar-brand" href="/">Zenvoices</a>
+  </div>
 
-	<div class="collapse navbar-collapse">
-	</div>
+  <div class="collapse navbar-collapse">
+    <button class="btn btn-default navbar-btn btm-sm" type="button" data-target="#modal_newClient" data-toggle="modal">
+      <span class="fui-plus"></span>
+      Add Client
+    </button>
+    <ul class="nav navbar-nav navbar-right" style="margin-right: 20px">
+      <div class="btn-group" id="account">
+        <button class="btn btn-inverse dropdown-toggle" id="account-dropdown" style="margin-top: 20px" data-target="dropdown">Account <b class="caret"></b></button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">My Account</a></li>
+          <li><a href="#">Application Settings</a></li>
+          <li><a href="#">Help</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+    </ul>
+  </div>
 </nav>
