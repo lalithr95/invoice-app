@@ -21,7 +21,10 @@ test:
   database: db/test.sqlite3
 
 production:
-  default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
+  host: <%= ENV['HOST'] %>
+  database: <%= ENV['DATABASE'] %>
+  username: <%= ENV['USERNAME'] %>
+  password: <%= ENV['PASSWORD'] %>
