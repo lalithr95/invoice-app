@@ -1,0 +1,59 @@
+body {
+	background: #34495E;
+}
+
+.loginTabs {
+	background: #F3F6F6;
+	border-radius: 3px;
+}
+
+.loginTabs .nav-tabs {
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.loginTabs .nav-tabs > li > a, .nav-tabs > li > a:hover, .nav-tabs > li > a:focus, .nav-tabs > li.active > a:hover, .loginTabs .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	border: none;
+	border-radius: 0px;
+	padding: 15px 23px 17px;
+	color: #36495C;
+}
+
+.loginTabs .nav-tabs > li.active:first-child, .loginTabs .nav-tabs > li.active:first-child a {
+	-webkit-border-top-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	border-top-left-radius: 3px;
+}
+
+.loginTabs .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	background: #EFF2F3;
+}
+
+.loginTabs .tab-content {
+	border: 0px;
+	border-radius: 0px;
+}
+
+.loginTabs .nav-tabs.nav-append-content > li.active:first-child::before {
+	display: none;
+}
+
+.loginTabs .nav-tabs.nav-append-content {
+	background: #C5CBCE;
+}
+
+.loginTabs .tab-content {
+	padding-bottom: 20px;
+}
+
+.loginTabs h1 {
+	font-size: 24px;
+}
+
+body .loginTabs .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	height: auto;
+}
