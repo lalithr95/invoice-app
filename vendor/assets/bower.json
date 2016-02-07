@@ -1,6 +1,7 @@
 {
   "name": "dsl-generated dependencies",
   "dependencies": {
-    "flat-ui": "2.2.2"
+    "flat-ui": "2.2.2",
+    "bootstrap": "latest"
   }
 }

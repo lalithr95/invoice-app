@@ -1,3 +1,731 @@
 // Place all the styles related to the Dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html, body, .container-fluid, section.app {
+    height:100%;
+}
+
+body {
+	background: #faf6f0;
+}
+
+body .container {
+	max-width: 100%;
+}
+
+body.dashboard .app, body.settings .app, body.documentation .app {
+	margin-left: 84px;
+}
+
+@media all and (max-width: 768px) {
+	
+	body section.app, body.noSecondBar section.app, body.dashboard .app, body.settings .app, body.documentation .app {
+		margin-left: 0px;
+	}
+	
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+body .navbar-default {
+	border-radius: 0px;
+}
+
+body .navbar-lg .navbar-brand {
+	font-weight: 400;
+	padding: 26px 24px;
+}
+
+body .select.mbl {
+	margin-bottom: 0px !important;
+}
+
+body .button_addItemColumn:hover {
+	color: #34495e;
+}
+
+body .navbar-collapse .navbar-nav.navbar-right:last-child > .dropdown:last-child > a {
+	border-radius: 0px;
+}
+
+hr.dashed {
+	border-top: 2px dashed #C5CBCE;
+}
+
+.paneTwo {
+	padding-top: 20px;
+}
+
+.mainNav {
+	background: #283848;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+@media all and (max-width: 768px) {
+	
+	.clientDropdown, .clientDropdown button, .addClientButton {
+		width: 100%;
+	}
+	
+	.clientDropdown button {
+		margin-bottom: 10px !important;
+	}
+	
+	.addClientButton {
+		margin-top: 10px !important;
+	}
+	
+	.navbar-collapse .navbar-nav.navbar-right {
+		margin: 0px;
+		width: 100%;
+	}
+	
+	.navbar-collapse {
+		max-height: 1000px !important;
+	}
+	
+	.navbar-collapse .nav.navbar-nav.navbar-right {
+		margin-bottom: 20px;
+	}
+	
+}
+
+ul.list_clients {
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+.leftBar {
+	position: fixed;
+	top: 76px;
+	left: 0px;
+	height: 100%;
+	background: #34495E;
+	border-radius: 0px;
+	z-index: 100;
+}
+
+.leftBar .power {
+	position: absolute;
+	bottom: 80px;
+}
+
+@media all and (max-width: 768px) {
+	.leftBar {
+		float: none;
+		width: auto;
+		height: auto;
+		clear: both;
+		overflow: auto;
+		position: relative;
+		margin: 0px;
+		border-radius: 0px;
+		z-index: 1000;
+	}
+	.leftBar > ul > li:first-child > a {
+		padding-top: 20px;
+	}
+	.leftBar > ul {
+		width: 100%;
+	}
+	.leftBar > ul > li {
+		display: inline;
+		float: left;
+		height: 63px;
+	}
+	.leftBar .power {
+		display: none;
+	}
+	
+}
+
+@media all and (max-width: 420px) {
+	
+	.leftBar > ul > li a {
+		padding-left: 22px;
+		padding-right: 22px;
+	}
+	
+}
+
+@media all and (max-width: 340px) {
+	
+	.leftBar > ul > li a {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	
+}
+
+.leftBar2 {
+	position: fixed;
+	padding-top: 76px;
+	left: 84px;
+	height: 100%;
+	width: 325px;
+	z-index: 100;
+	border-right: 2px solid #C5CBCE;
+	background: #edeff0;
+	overflow-y: scroll;
+}
+
+@media all and (max-width: 1585px) {
+	
+	.leftBar2 {
+		width: 275px;
+	}
+}
+
+@media all and (max-width: 768px) { 
+
+	.leftBar2 {
+		width: 100%;
+		position: relative;
+		left: 0px;
+		height: auto;
+	}
+	
+}
+
+.leftBar2 .buttonWrapper {
+	padding: 20px;
+	border-bottom: 1px solid #C5CBCE;
+}
+
+section.app {
+	padding-top: 76px;
+	margin-left: 409px;
+}
+
+@media all and (max-width: 1585px) {
+	
+	section.app {
+		margin-left: 359px;
+	}
+	
+}
+
+ul.paneOneList {
+	list-style: none;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+ul.paneOneList li {
+	height: auto;
+	border-bottom: 1px solid #C5CBCE;
+	padding: 10px 20px;
+}
+
+ul.paneOneList li.active, ul.paneOneList li:hover {
+	background: #e7e7e7;
+}
+
+ul.paneOneList li.active a {
+}
+
+/* filters */
+
+.filterPanel {
+	display: none;
+}
+
+.filters {
+	padding: 10px 20px;
+	border-bottom: 1px solid #C5CBCE;
+}
+
+.filters button {
+	margin-right: 5px;
+	text-transform: uppercase;
+	opacity: 0.5;
+}
+
+.filters button#dropdown_clients, .filters button#dropdown_years {
+	opacity: 1;
+}
+
+.filters button.active {
+	opacity: 1;
+}
+
+/* end filters */
+
+
+/* invoice list */
+
+ul.invoiceList li > a > span {
+	display: block;
+}
+
+ul.invoiceList li .invoiceNumber {
+	color: #36495C;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+ul.invoiceList li .label {
+	margin-left : 10px;
+}
+
+ul.invoiceList li .invoiceAmount {
+	font-weight: bold;
+	font-size: 17px;
+}
+
+ul.invoiceList li .invoiceName, ul.invoiceList li .invoiceDate {
+	color: #34495e;
+	font-size: 14px;
+	width: 50%;
+	height: 28px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* end invoice list */
+
+
+
+/* client list */
+
+ul.paneOneList.clientList li {
+	padding: 14px 20px;
+}
+
+ul.paneOneList.clientList li a {
+	display: block;
+}
+
+ul.clientList li a > b {
+	color: #36495c;
+	display: block;
+	height: 35px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+
+ul.clientList li a .label {
+	margin-right: 5px;
+}
+
+/* end client list */
+
+
+/* report list */
+
+ul.reportsList li {
+	padding: 14px 20px;
+}
+
+ul.reportsList li a > b {
+	color: #36495C;
+	display: block;
+}
+
+ul.reportsList li a > span {
+	display: block;
+	color: #3F556A;
+	font-size: 14px;
+}
+
+/* end report list */
+
+
+
+/* invoice */
+
+.invoice {
+	margin: 0px auto 40px;
+	border: 2px dashed #C5CBCE;
+	position: relative;
+	background: #fff;
+}
+
+.invoice .navbar {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.invoice .navbar button, .invoice .navbar a {
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+@media all and (max-width: 502px) {
+
+	.invoice .navbar button, .invoice .navbar a {
+		display: block;
+		width: 100%;
+	}
+	
+}
+
+.invoiceWrapper {
+	font-size: 15px;
+	line-height: 22px;
+	padding: 20px 40px;
+	position: relative;
+}
+
+@media all and (max-width: 680px) { 
+
+	.invoiceWrapper {
+		padding: 20px 10px;
+	}
+	
+}
+
+.invoiceWrapper .itemRowButtons, .invoiceWrapper .itemColButtons, .paymentsTable .paymentRowButtons, .clientPaymentsTable .paymentRowButtons {
+	position: absolute;
+	right: -20px;
+	top: 12px;
+}
+
+.invoiceWrapper .itemColButtons {
+	right: 0px;
+	top: 13px;
+}
+
+.invoiceWrapper .itemRowButtons a span, .paymentsTable .paymentRowButtons a span, .clientPaymentsTable .paymentRowButtons a span {
+	font-size: 16px;
+}
+
+.invoiceWrapper .itemColButtons a span {
+	font-size: 16px;
+}
+
+.invoiceWrapper .itemColButtons a {
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+.invoiceEditWrapper {
+}
+
+.invoiceWrapper .itemsTable td, .invoiceWrapper .itemsTable th, .paymentsTable td, .clientPaymentsTable td {
+	position: relative;
+}
+
+.invoiceTable h1 {
+	font-size: 28px;
+}
+
+.invoiceTable h2 {
+	font-size: 24px;
+}
+
+.invoiceTable .lead {
+	font-size: 18px;
+}
+
+table.itemsTable tr td:last-child, table.itemsTable tr th:last-child, table.totalsTable tr td:last-child, table.totalsTable tr th:last-child, .clientPaymentsTable tr th:last-child, .clientPaymentsTable tr td:last-child {
+	text-align: right;
+}
+
+table.totalsTable tr:first-child td {
+	border-top: 0px;
+}
+
+.invoice .invoicePanel {
+	display: none;
+	padding: 20px;
+}
+
+.invoice .invoicePanel .tab-content {
+	padding-bottom: 20px;
+}
+
+.paymentsTable tr td:last-child, .paymentsTable tr th:last-child {
+	text-align: right;
+}
+
+.ribbon-wrapper {
+	width: 85px;
+  	height: 88px;
+  	overflow: hidden;
+  	position: absolute;
+  	top: -3px;
+  	right: -3px;
+	z-index: 100;
+}
+
+.ribbon-wrapper > * {
+	
+}
+
+.ribbon {
+	font-size: 13px;
+	font-weight: bold;
+  	color: #333;
+  	text-align: center;
+  	-webkit-transform: rotate(45deg);
+  	-moz-transform:    rotate(45deg);
+  	-ms-transform:     rotate(45deg);
+  	-o-transform:      rotate(45deg);
+  	position: relative;
+  	padding: 5px 0;
+  	left: -5px;
+  	top: 12px;
+ 	width: 120px;
+  	color: #fff;
+	text-transform: uppercase;
+}
+
+.ribbon.due {
+	background-color: #3498DB;
+}
+
+.ribbon.paid {
+	background-color: #1ABC9C;
+}
+
+.ribbon.past-due {
+	background-color: #D9534F;
+}
+
+.smallSelect .select {
+	min-width: 0px;
+	width: 100%;
+}
+
+/* end invoice */
+
+
+
+/* client */
+
+.clientTabs {
+	margin: 0px auto 40px;
+}
+
+.clientTabs .nav-tabs li.active a {
+	background: #fff !important;
+	color: #36495C;
+}
+
+.clientTabs .tab-content {
+	background: #fff;
+}
+
+.clientTabs .tab-pane {
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
+
+.form-inline .form-control.select2-container {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.dataTables_length .select2-choice {
+	padding: 7px 39px 5px 15px;
+	min-height: 0px;
+}
+
+@media all and (max-width: 1199px) { 
+
+	.clientDetailsButtons button, .clientDetailsButtons a {
+		float: none;
+		width: 100%;
+		margin-top: 10px;
+	}
+
+}
+
+/* end client */
+
+
+/* dashboard */
+
+.dashboardWrapper {
+	border: 2px dashed #C5CBCE;
+	padding: 20px;
+	margin: 0px auto 40px;
+	border-radius: 3px;
+}
+
+.dashboard h2 {
+	margin: 10px 0px 20px;
+	font-size: 22px;
+}
+
+.dashboardTotal {
+	height: 100px;
+	line-height: 100px;
+	font-weight: bold;
+	color: #fff;
+	font-size: 16px;
+	margin-bottom: 10px;
+	font-size: 35px;
+	border-radius: 3px;
+}
+
+.dashboardTotal.paid {
+	background: #0EAC93;
+}
+
+.dashboardTotal.due {
+	background: #358CC0;
+}
+
+.dashboardTotal.past-due {
+	background: #EA5548;
+}
+
+#div_yearlyChart canvas {
+	max-width: 100%;
+}
+
+#div_yearlyChart .line-legend li {
+	list-style: none;
+	list-style-type: none;
+	font-size: 14px;
+	float: left;
+	margin-right: 20px;
+}
+
+#div_yearlyChart .line-legend li > span {
+	display: inline-block;
+	height: 3px;
+	width: 20px;
+	margin-right: 5px;
+	position: relative;
+	top: -3px;
+}
+
+#div_donutChart .doughnut-legend {
+	margin-top: 20px;
+}
+
+#div_donutChart .doughnut-legend li {
+	font-size: 14px;
+	list-style-type: none;
+	list-style: none;
+	line-height: 1.6em;
+}
+
+#div_donutChart .doughnut-legend li span {
+	float: left;
+	margin-right: 10px;
+	width: 20px;
+	height: 15px;
+	position: relative;
+	top: 4px;
+	border-radius: 3px;
+}
+
+/* end dashboard */
+
+
+
+/* reporting page */
+
+.report {
+	border: 2px dashed #C5CBCE;
+	margin: 0px auto 40px;
+	background: #fff;
+	overflow: hidden;
+}
+
+.report .reportTable h2 {
+	font-size: 24px;
+}
+
+.report .reportTable p {
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.report .reportTable .itemTable tr th {
+	width: 20%;
+}
+
+.report .reportTable .itemTable tr th:nth-child(4), .report .reportTable .itemTable tr th:nth-child(5), .report .reportTable .itemTable tr td:nth-child(4), .report .reportTable .itemTable tr td:nth-child(5), .report .reportTable .itemTable tfoot td {
+	text-align: right;
+}
+
+.report .reportTable .itemTable tfoot td {
+	font-weight: bold;
+}
+
+@media all and (max-width: 325px) { 
+
+	.report .reportButtons a {
+		float: none;
+		display: block;
+		margin: 10px;
+	}
+
+}
+
+/* end reporting page */
+
+
+
+/* settings */
+
+.settingPanel:first-child {
+	margin-top: 60px;
+}
+
+.settingPanel {
+	border: 2px dashed #c5cbce;
+	margin: 20px auto 40px;
+	padding: 40px 20px 20px;
+	position: relative;
+}
+
+.settingPanel h5 {
+	margin-top: 0px;
+	font-size: 22px;
+	background: #FAF6F0;
+	position: absolute;
+	top: -14px;
+	left: 10px;
+	padding: 0px 10px;
+}
+
+.settingPanel p {
+	font-size: 16px;
+}
+
+.settingPanel .form-inline .ui-spinner-input {
+	width: 120px;
+}
+
+/* end settings */
+
+
+
+/* select dropdown */
+
+.select.custom {
+    border: 2px solid #bdc3c7;
+    border-radius: 3px;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    height: 42px;
+    line-height: 1.467;
+    padding: 8px 12px;
+}
+
+.select.custom option {
+    padding: 8px 12px;
+    height: 42px;
+}
+
+.select.custom:focus, .select.custom:active {
+    outline: none;   
+}
+
+/* end select dropdown */

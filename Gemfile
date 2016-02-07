@@ -12,8 +12,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pg', '~> 0.18.4'
 gem 'puma', '~> 2.16'
 gem 'rubocop', '~> 0.36.0', require: false
-gem 'flat-ui-sass', github: 'lalithr95/flat-ui-sass'
-gem 'compass', '~> 1.0', '>= 1.0.3'
 gem "bower-rails", "~> 0.10.0"
 # gem 'bcrypt', '~> 3.1.7'
 

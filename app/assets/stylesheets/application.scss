@@ -11,9 +11,7 @@
  * file per style scope.
  *
  *= require_tree .
- *= require 'flat-ui-sass'
+ *= require 'flat-ui'
+ *= require 'videojs'
  *= require_self
  */
-
-@import "bootstrap-sprockets";
-@import "bootstrap";
