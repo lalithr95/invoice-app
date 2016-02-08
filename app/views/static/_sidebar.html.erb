@@ -5,6 +5,6 @@
     <li ><a href="#" class="fi-torsos-all" title="Clients"></a></li>
     <li ><a href="#" class="fi-results-demographics medium" title="Reports"></a></li>
     <li><a href="#" class="fi-page-add" title="Documentation"></a></li>
-    <li><a href="#" class="fi-power medium" title="Logout"></a></li>
+    <li><%= link_to "", destroy_user_session_path, method: :delete, class: 'fi-power' %></li>
   </ul>
 </div>
