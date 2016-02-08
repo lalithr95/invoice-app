@@ -3,7 +3,7 @@ class DashboardController < ApplicationController
     if user_signed_in?
       render 'index'
     else
-      render temlate: 'dashboard/auth'
+      render template: 'dashboard/auth'
     end
 	end
 end

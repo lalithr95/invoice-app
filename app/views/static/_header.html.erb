@@ -19,11 +19,11 @@
         <div class="btn-group" id="account">
           <button class="btn btn-inverse dropdown-toggle" id="account-dropdown" style="margin-top: 20px" data-target="dropdown">Account <b class="caret"></b></button>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">My Account</a></li>
+            <li><%= link_to "My Account", edit_user_registration_path %>
             <li><a href="#">Application Settings</a></li>
             <li><a href="#">Help</a></li>
             <li class="divider"></li>
-            <li><a href="#">Logout</a></li>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
           </ul>
         </div>
       <% end %>
