@@ -1,0 +1,51 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+
+  <div class="row field form-group">
+    <div class="col-md-3">
+      <%= f.label :company_name, class: 'control-label' %>
+    </div>
+    <div class="col-md-6">
+      <%= f.text_field :company_name, autofocus: true, class: 'form-control', placeholder: 'Enter company name' %>
+    </div>
+  </div>
+
+  <div class="row field form-group">
+    <div class="col-md-3">
+      <%= f.label :company_phone, class: 'control-label' %>
+    </div>
+    <div class="col-md-6">
+      <%= f.text_field :company_phone, autofocus: true, class: 'form-control', placeholder: 'Enter company phone' %>
+    </div>
+  </div>
+
+  <div class="row field form-group">
+    <div class="col-md-3">
+      <%= f.label :company_fax, class: 'control-label' %>
+    </div>
+    <div class="col-md-6">
+      <%= f.text_field :company_fax, autofocus: true, class: 'form-control', placeholder: 'Enter company fax' %>
+    </div>
+  </div>
+
+  <div class="row field form-group">
+    <div class="col-md-3">
+      <%= f.label :company_address, class: 'control-label' %>
+    </div>
+    <div class="col-md-6">
+      <%= f.text_area :company_address, autofocus: true, class: 'form-control materialize-textarea', placeholder: 'Enter company address' %>
+    </div>
+  </div>
+
+  <div class="row field form-group">
+    <div class="col-md-3">
+      <%= f.label :company_info, class: 'control-label' %>
+    </div>
+    <div class="col-md-6">
+      <%= f.text_area :company_info, autofocus: true, class: 'form-control materialize-textarea', placeholder: 'Enter additional info' %>
+    </div>
+  </div>
+
+  <div class="actions col-md-offset-3">
+    <%= f.submit "Save Company details", class: 'btn btn-primary' %>
+  </div><br />
+<% end %>
