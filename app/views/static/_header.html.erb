@@ -8,23 +8,24 @@
 
   <div class="collapse navbar-collapse">
     <% if user_signed_in? %>
-      <button class="btn btn-default navbar-btn btm-sm" type="button" data-target="#modal_newClient" data-toggle="modal">
+      <a class="waves-effect waves-light btn" style="margin-top: 15px" data-target="#modal_newClient" data-toggle="modal">
         <span class="fi-plus medium"></span>
         Add Client
-      </button>
+      </a>
     <% end %>
-
-    <ul class="nav navbar-nav navbar-right" style="margin-right: 20px">
+    <!-- nav dropdown -->
+    <ul id="account-dropdown" class="dropdown-content">
+        <li><%= link_to "My Account", edit_user_registration_path %></li>
+        <li><a href="#">Application Settings</a></li>
+        <li><a>Help</a></li>
+        <li class="divider"></li>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+    </ul>
+    <!--end nav dropdown -->
+    <ul class="nav navbar-nav navbar-right" style="margin-right: 15px">
       <% if user_signed_in? %>
         <div class="btn-group" id="account">
-          <button class="btn btn-inverse dropdown-toggle" id="account-dropdown" style="margin-top: 20px" data-target="dropdown">Account <b class="caret"></b></button>
-          <ul class="dropdown-menu" role="menu">
-            <li><%= link_to "My Account", edit_user_registration_path %>
-            <li><a href="#">Application Settings</a></li>
-            <li><a href="#">Help</a></li>
-            <li class="divider"></li>
-            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-          </ul>
+          <a class="btn waves-effect waves-light dropdown-button" data-activates="account-dropdown" style="margin-top: 20px" data-target="dropdown">Account<i class="material-icons right caret" style="margin-top: 15px; margin-left: 25px"></i></a>
         </div>
       <% end %>
     </ul>

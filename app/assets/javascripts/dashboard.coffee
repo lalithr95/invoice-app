@@ -3,9 +3,3 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 jQuery ->
-#Events
-  $('#account-dropdown').click (e) ->
-    e.stopPropagation()
-    $('#account').toggleClass("open")
-  $(document).click ->
-    $('#account').removeClass("open")

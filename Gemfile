@@ -16,6 +16,7 @@ gem "bower-rails", "~> 0.10.0"
 gem 'font-awesome-sass', '~> 4.5.0'
 gem 'foundation-icons-sass-rails'
 gem 'devise', '~> 3.5', '>= 3.5.6'
+gem 'materialize-sass'
 gem 'rails_12factor', group: :production
 
 # gem 'bcrypt', '~> 3.1.7'

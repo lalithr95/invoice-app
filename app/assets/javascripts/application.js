@@ -14,6 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
-//= require flat-ui
+//= require materialize-sprockets
 //= require videojs
 //= require_tree .
