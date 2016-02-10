@@ -8,7 +8,7 @@
 
   <div class="collapse navbar-collapse">
     <% if user_signed_in? %>
-      <a class="waves-effect waves-light btn" style="margin-top: 15px" data-target="#modal_newClient" data-toggle="modal">
+      <a class="waves-effect waves-light btn modal-trigger" style="margin-top: 15px" href="#new-client">
         <span class="fi-plus medium"></span>
         Add Client
       </a>
@@ -31,3 +31,7 @@
     </ul>
   </div>
 </nav>
+
+<% if user_signed_in? %>
+  <%= render 'modals/client' %>
+<% end %>
