@@ -1,7 +1,86 @@
 <div id="new-client" class="modal">
   <div class="modal-content">
     <div class="row">
-      <i class="fi-plus"></i> New Client
+      <span class="fi-plus"></span> New Client
     </div>
+
+    <%= form_for(client, html: {method: 'post'}) do |f| %>
+
+      <div class="row input-field form-group">
+        <div class="col-md-3">
+          <%= f.label :client_name, class: 'control-label' %>
+        </div>
+        <div class="col-md-6">
+          <%= f.text_field :name, autofocus: true, class: 'form-control', placeholder: 'Enter client name' %>
+        </div>
+      </div>
+
+      <div class="row input-field form-group">
+        <div class="col-md-3">
+          <%= f.label :client_contact, class: 'control-label' %>
+        </div>
+        <div class="col-md-6">
+          <%= f.text_field :contact, autofocus: true, class: 'form-control', required: true, placeholder: 'Enter client contact name' %>
+        </div>
+      </div>
+
+      <div class="row input-field form-group">
+        <div class="col-md-3">
+          <%= f.label :client_email, class: 'control-label' %>
+        </div>
+        <div class="col-md-6">
+          <%= f.email_field :email, autofocus: true, class: 'form-control', required: true, placeholder: 'Enter client email' %>
+        </div>
+      </div>
+
+      <div class="row input-field form-group">
+        <div class="col-md-3">
+          <%= f.label :client_phone, class: 'control-label' %>
+        </div>
+        <div class="col-md-6">
+          <%= f.text_field :phone, autofocus: true, class: 'form-control', placeholder: 'Enter client phone' %>
+        </div>
+      </div>
+
+      <div class="row input-field form-group">
+        <div class="col-md-3">
+          <%= f.label :client_fax, class: 'control-label' %>
+        </div>
+        <div class="col-md-6">
+          <%= f.text_field :fax, autofocus: true, class: 'form-control', placeholder: 'Enter client fax' %>
+        </div>
+      </div>
+
+      <div class="row input-field form-group">
+        <div class="col-md-3">
+          <%= f.label :defualt_currency, class: 'control-label' %>
+        </div>
+        <div class="col-md-6">
+          <%= f.select :currency, currency_options.collect { |p| [p.value, p.name] }, autofocus: true, class: 'form-control', selected: ['USD $', 'USD'] %>
+        </div>
+      </div>
+
+      <div class="row input-field form-group">
+        <div class="col-md-3">
+          <%= f.label :client_website, class: 'control-label' %>
+        </div>
+        <div class="col-md-6">
+          <%= f.text_field :website, autofocus: true, class: 'form-control', placeholder: 'Enter client website' %>
+        </div>
+      </div>
+
+      <div class="row input-field form-group">
+        <div class="col-md-3">
+          <%= f.label :client_address, class: 'control-label' %>
+        </div>
+        <div class="col-md-6">
+          <%= f.text_area :address, autofocus: true, class: 'form-control materialize-textarea', placeholder: 'Enter client address' %>
+        </div>
+      </div>
+
+      <div class="actions col-md-offset-3">
+        <%= f.submit "Create Client", class: 'btn btn-primary' %>
+      </div><br />
+    <% end %>
   </div>
 </div>
