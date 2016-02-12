@@ -18,5 +18,7 @@ jQuery ->
         if data.status
           $('#new-client').closeModal()
           Materialize.toast "Client successfully created", 4000
+        else
+          Materialize.toast "Enter required fields!", 4000
       error: (data) ->
         Materialize.toast "Something went wrong! Try again", 4000
