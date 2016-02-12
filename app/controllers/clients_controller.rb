@@ -1,13 +1,13 @@
 class ClientsController < ApplicationController
   def create
-    @client = current_user.clients.new
-    if @client.save(client_params)
+    @client = current_user.clients.new(client_params)
+    if @client.save
       render json: {
-        status: 200
+        status: true
       }
     else 
       render json: {
-        status: 500
+        status: false
       }
     end
   end
