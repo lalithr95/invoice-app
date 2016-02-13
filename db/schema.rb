@@ -11,7 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160210193523) do
+ActiveRecord::Schema.define(version: 20160213171354) do
+
+  create_table "client_invoices", force: :cascade do |t|
+    t.string   "client_id"
+    t.string   "title"
+    t.integer  "po_number"
+    t.date     "issue_date",         default: '2016-02-13'
+    t.boolean  "visible",            default: true
+    t.string   "public_url"
+    t.integer  "recur",              default: 0
+    t.date     "due_date",           default: '2016-02-13'
+    t.boolean  "paid",               default: false
+    t.string   "currency"
+    t.float    "discount",           default: 0.0
+    t.boolean  "allow_bank_payment", default: true
+    t.string   "tax_type"
+    t.float    "tax",                default: 0.0
+    t.text     "top_note"
+    t.text     "internal_note"
+    t.text     "bottom_note"
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
+  end
+
+  add_index "client_invoices", ["client_id"], name: "index_client_invoices_on_client_id"
+  add_index "client_invoices", ["issue_date"], name: "index_client_invoices_on_issue_date"
+  add_index "client_invoices", ["paid"], name: "index_client_invoices_on_paid"
+  add_index "client_invoices", ["public_url"], name: "index_client_invoices_on_public_url"
+  add_index "client_invoices", ["title"], name: "index_client_invoices_on_title"
 
   create_table "clients", force: :cascade do |t|
     t.integer  "user_id"
