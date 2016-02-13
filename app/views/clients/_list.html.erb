@@ -1,0 +1,7 @@
+<ul class="dropdown-content" id="create-invoice">
+  <% list_clients.each do |client| %>
+    <li>
+      <%= link_to client.name, client_invoices_path(client), method: :post %>
+    </li>
+  <% end %>
+</ul>
