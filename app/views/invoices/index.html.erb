@@ -1,0 +1,32 @@
+<div class="leftBar2">
+  <div class="filterPanel" id="filterPanel">
+    <div class="filters yearFilter">
+      <div class="btn-group" style="width: 100%">
+        <a class="dropdown-button btn" data-activates="year">Inovice for year</a>
+        <ul id="year" class="dropdown-content">
+          <li><a data-filter="2016">2016</a></li>
+          <li><a data-filter="2015">2015</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="filters clientFilter">
+      <a class="dropdown-button btn" data-activates="client-list">Invoice for client</a>
+      <%= render 'clientfilter' %>
+    </div>
+
+    <div class="filters" id="filters">
+      <a class="dropdown-button btn" data-activates="filter-payment">Pay options</a>
+      <ul class="dropdown-content" id="filter-payment">
+        <li><%= link_to "PAID", 'data-filter' => "paid" %></li>
+        <li><%= link_to "DUE", 'data-filter' => "due" %></li>
+        <li><%= link_to "PAST DUE", 'data-filter' => "past-due" %></li>
+        <li><%= link_to "ALL", 'data-filter' => "all" %></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="filters">
+    <a class="btn light-blue accent-3 waves-effect waves-light" id="filter-display">Show Filter Panel</a>
+  </div>
+</div>

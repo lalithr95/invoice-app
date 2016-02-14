@@ -1,4 +1,8 @@
 class InvoicesController < ApplicationController
+  def index
+    @invoices = ClientInvoice.all
+  end
+
   def create
     client = Client.find(params[:client_id])
     if client
