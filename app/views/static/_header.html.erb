@@ -15,10 +15,10 @@
         <span class="fi-plus medium"></span>
         Add Client
       </a>
+      <!-- new invoice -->
+      <%= render partial: 'clients/list' %>
+      <!-- end new invoice -->
     <% end %>
-    <!-- new invoice -->
-    <%= render partial: 'clients/list' %>
-    <!-- end new invoice -->
     <!-- nav dropdown -->
     <ul id="account-dropdown" class="dropdown-content">
       <li><%= link_to "My Account", edit_user_registration_path %></li>
@@ -31,7 +31,7 @@
     <ul class="nav navbar-nav navbar-right" style="margin-right: 15px">
       <% if user_signed_in? %>
         <div class="btn-group" id="account">
-          <a class="btn waves-effect waves-light dropdown-button" data-activates="account-dropdown" style="margin-top: 20px" data-target="dropdown">Account<i class="material-icons right caret" style="margin-top: 15px; margin-left: 25px"></i></a>
+          <a class="btn waves-effect waves-light dropdown-button" data-activates="account-dropdown" style="margin-top: 15px" data-target="dropdown">Account<i class="material-icons right caret" style="margin-top: 15px; margin-left: 25px"></i></a>
         </div>
       <% end %>
     </ul>
