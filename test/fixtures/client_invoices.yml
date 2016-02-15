@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  client_id: MyString
+  integer: MyString
+  title: MyString
+  po_number: 1
+  issue_date: 2016-02-13
+  visible: false
+  public_url: MyString
+  recur: 1
+  due_date: 2016-02-13
+  paid: false
+  currency: MyString
+  discount: 1.5
+  allow_bank_payment: false
+  tax_type: MyString
+  tax: 1.5
+  top_note: MyText
+  internal_note: MyText
+  bottom_note: MyText
+
+two:
+  client_id: MyString
+  integer: MyString
+  title: MyString
+  po_number: 1
+  issue_date: 2016-02-13
+  visible: false
+  public_url: MyString
+  recur: 1
+  due_date: 2016-02-13
+  paid: false
+  currency: MyString
+  discount: 1.5
+  allow_bank_payment: false
+  tax_type: MyString
+  tax: 1.5
+  top_note: MyText
+  internal_note: MyText
+  bottom_note: MyText

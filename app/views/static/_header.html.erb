@@ -8,18 +8,24 @@
 
   <div class="collapse navbar-collapse">
     <% if user_signed_in? %>
-      <a class="waves-effect waves-light btn modal-trigger" style="margin-top: 15px" href="#new-client" data-target="new-client">
+      <a class="waves-effect waves-light btn dropdown-button" style="margin-top: 15px;" data-activates="create-invoice"><span class="fi-plus medium"></span>
+        Create New Invoice For
+      </a>
+      <a class="waves-effect waves-light btn modal-trigger" style="margin-top: 15px; margin-left: 15px" href="#new-client" data-target="new-client">
         <span class="fi-plus medium"></span>
         Add Client
       </a>
     <% end %>
+    <!-- new invoice -->
+    <%= render partial: 'clients/list' %>
+    <!-- end new invoice -->
     <!-- nav dropdown -->
     <ul id="account-dropdown" class="dropdown-content">
-        <li><%= link_to "My Account", edit_user_registration_path %></li>
-        <li><a href="#">Application Settings</a></li>
-        <li><a>Help</a></li>
-        <li class="divider"></li>
-        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      <li><%= link_to "My Account", edit_user_registration_path %></li>
+      <li><a href="#">Application Settings</a></li>
+      <li><a>Help</a></li>
+      <li class="divider"></li>
+      <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
     </ul>
     <!--end nav dropdown -->
     <ul class="nav navbar-nav navbar-right" style="margin-right: 15px">

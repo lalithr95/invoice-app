@@ -1,0 +1,17 @@
+<ul class="paneOneList invoiceList" id="invoiceList">
+  <% invoice_all.each do |invoice| %>
+    <li class="paid all" data-invoice="<%= invoice.id %>" data-year="<%= invoice.issue_date.year %>">
+      <%= link_to do %>
+        <span class="clearfix">
+          <span class="invoiceAmount pull-right"></span>
+          <span class="invoiceNumber pull-left">#<%= invoice.id %></span>
+          <span class="label label-primary">paid</span>
+        </span>
+        <span class="clearfix">
+          <span class="invoiceName pull-left"><%= truncate(invoice.client.name, length: 20) %></span>
+          <span class="invoiceDate pull"></span>
+        </span>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
