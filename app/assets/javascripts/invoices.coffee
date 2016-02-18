@@ -5,11 +5,16 @@ jQuery ->
   filterdata =
     year: 2016
     payment: 'all'
-
+  if !$('body').hasClass('invoices')
+    $('body').removeClass()
+    $('body').addClass('invoices')
   $('#filter-display').click (e) ->
+    that = @
     if $('#filterPanel').is(':visible')
-      $('#filterPanel').toggleClass("filterPanel")
-      $(this).text "Show Filter Panel"
+      $('#filterPanel').slideUp ->
+        $('#filterPanel').toggleClass("filterPanel")
+        $(that).text "Show Filter Panel"
     else
-      $('#filterPanel').toggleClass("filterPanel")
-      $(this).text "Hide Filter Panel"
+      $('#filterPanel').slideDown ->
+        $('#filterPanel').toggleClass("filterPanel")
+        $(that).text "Hide Filter Panel"
