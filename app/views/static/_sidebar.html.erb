@@ -1,10 +1,10 @@
 <div class="iconbar leftBar">
   <ul>
-    <li class="active"><a href="/" class="fi-home tooltipped" title="Dashboard" data-position="right" data-tooltip="Dashboard"></a></li>
-    <li ><a href="/invoices" class="fi-clipboard-pencil tooltipped" title="Invoices" data-position="right" data-tooltip="Invoices"></a></li>
-    <li ><a href="#" class="fi-torsos-all tooltipped" title="Clients"  data-position="right" data-tooltip="Clients"></a></li>
-    <li ><a href="#" class="fi-results-demographics tooltipped" title="Reports" data-position="right" data-tooltip="Reports"></a></li>
-    <li><a href="#" class="fi-page-add tooltipped" title="Documentation" data-position="right" data-tooltip="Documentation"></a></li>
-    <li><%= link_to "", destroy_user_session_path, method: :delete, class: 'fi-power' %></li>
+    <li class="active"><a href="/" class="fi-home tooltipped" data-position="right" data-tooltip="Dashboard"></a></li>
+    <li ><a href="/invoices" class="fi-clipboard-pencil tooltipped" data-position="right" data-tooltip="Invoices"></a></li>
+    <li ><a href="#" class="fi-torsos-all tooltipped" data-position="right" data-tooltip="Clients"></a></li>
+    <li ><a href="#" class="fi-results-demographics tooltipped" data-position="right" data-tooltip="Reports"></a></li>
+    <li><a href="#" class="fi-page-add tooltipped" data-position="right" data-tooltip="Documentation"></a></li>
+    <li><%= link_to "", destroy_user_session_path, method: :delete, class: 'fi-power', 'data-tooltip' => 'Logout' %></li>
   </ul>
 </div>
