@@ -5,4 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :clients
   validates :current_password, :presence => true, :on => :create
+  validates :email, presence: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 end
