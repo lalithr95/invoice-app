@@ -2,7 +2,6 @@
 
 one:
   client_id: MyString
-  integer: MyString
   title: MyString
   po_number: 1
   issue_date: 2016-02-13
@@ -22,7 +21,6 @@ one:
 
 two:
   client_id: MyString
-  integer: MyString
   title: MyString
   po_number: 1
   issue_date: 2016-02-13
