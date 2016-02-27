@@ -29,6 +29,8 @@ gem 'rails_12factor', group: :production
 group :development, :test do
 	gem 'sqlite3'
   gem 'byebug'
+  gem 'rspec-rails'
+  gem 'capybara'
 end
 
 group :development do
