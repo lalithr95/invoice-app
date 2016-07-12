@@ -1,0 +1,21 @@
+review:
+  checklist:
+    - Blah Blah
+  checks:
+    - echo 42
+
+deploy:
+  override:
+    - bin/slow
+    - bin/timeout: {timeout: 5}
+
+rollback:
+  override:
+    - echo done
+
+tasks:
+  restart:
+    action: Restart application
+    description: Trigger the restart of both app and jobs servers
+    steps:
+      - cap $ENVIRONMENT deploy:restart
