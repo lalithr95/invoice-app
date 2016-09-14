@@ -1,0 +1,7 @@
+director: dneufeld
+owners:
+  - lalith
+create_issues: true
+classification: tier3
+logs_url: http://logs.bugsnag.com
+bugs_url: https://app.bugsnag.com/
